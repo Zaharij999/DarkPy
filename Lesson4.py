@@ -4,28 +4,28 @@ class Student:
         self.name = name
         self.age = age
         self.education = education
-        self.progress = 0
+        self.progress = 12
         self.gladness = 50
         self.alive = True
     def to_study(self):
         print("Time to study")
-        self.gladness-=5
-        self.progress+=0.5
+        self.gladness-=6
+        self.progress+=4.5
     def to_sleep(self):
         print("Time to sleep")
-        self.gladness+=3
+        self.gladness+=2
     def to_chill(self):
         print("Time to chill")
-        self.gladness+=5
-        self.progress-=0.33
+        self.gladness+=4
+        self.progress-=3
     def if_alive(self):
-        if self.progress < -5:
+        if self.progress < 0:
             print("Cast out...")
             self.alive = False
         if self.gladness <=0:
             print("Stressed out...")
             self.alive = False
-        if self.progress >= 6:
+        if self.progress >= 100:
             print("Passed externally...")
             self.alive = False
     def printData(self):
@@ -43,7 +43,7 @@ class Student:
         self.printData()
         self.if_alive()
 Zaharij = Student("Krakovetskyj Zahaharij", 13, "ItStep")
-for day in range(365):
+for day in range(366):
     if Zaharij.alive==False:
         print("Game over!")
         break
