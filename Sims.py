@@ -5,7 +5,7 @@ class Human:
         self.job = job
         self.home = home
         self.car = car
-        self.money = 0
+        self.money = -510
         self.gladness = 50
         self.satiety = 20
         self.alive = True
